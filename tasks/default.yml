@@ -2,18 +2,16 @@
 
 - name: replace default locations with php7
   file:
-    src: /opt/php71/bin/{{ item }}
+    src: /opt/php72/bin/{{ item }}
     dest: /usr/bin/{{ item }}
     owner: root
     group: root
     state: link
   with_items:
-    - peardev
     - phpize
     - php-config
     - php
     - phpdbg
-    - pear
     - pecl
     - phar
   become: yes
